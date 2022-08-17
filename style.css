@@ -1,0 +1,48 @@
+body{
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 65px;
+    color: orange;
+    font-family: sans-serif;
+  }
+
+  p {
+    color: rgb(88, 88, 255);
+    font-weight: 600;
+    font-size: 48px;
+  }
+
+  #list-disodered{
+    font-style: oblique;
+    line-height: 40px;
+    text-align: center;
+    list-style-position: outside;
+  }
+
+  #div-list-disodered{
+    padding-left: 600px;
+    padding-right: 600px;
+  
+  }
+
+  .div-list-adjusted{
+    list-style-position: inside;
+  }
+
+  #list_1{
+    background-color: yellow;
+  }
+
+  #list_2{
+    background-color: red;
+  }
+
+  #list_3{
+    background-color: brown;
+  }
+  
+  .backgroud{
+    background-color: rgb(214, 214, 214);
+  }
