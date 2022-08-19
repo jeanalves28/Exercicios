@@ -1,0 +1,43 @@
+h1, p {
+    text-align: center;
+    font-family: Calibri;
+}
+
+#box {
+    padding: 2% 10%;
+    width: 30%;
+    height: 30%;
+    border: 1px;
+    position:relative;
+    left: 25%;
+    border-style: solid;
+    text-align: center;
+}
+
+#box:hover {
+    background-color: rgb(163, 163, 255);
+    color: white;
+    transition: 1.3s;
+    border: 10px solid yellow;
+}
+
+li {
+    margin: 5px 5px;
+    list-style: none;
+}
+
+li:hover, a:hover {
+    color: white;
+    transition: 0.5s;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:active {
+    font-family: Courier New;
+    font-size: 20px;
+    float: inherit;
+}
