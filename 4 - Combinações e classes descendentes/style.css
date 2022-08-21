@@ -40,7 +40,7 @@ ul li:nth-child(2), ul li:nth-child(3) {
     background-color: pink;
 }
 
-ul[id="bg"] li {
+ul.bg li {
     background-color: white;
     list-style: none;
 }
