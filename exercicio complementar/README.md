@@ -12,9 +12,9 @@ Para uma melhor organização, faça commits a cada tarefa concluída. Vamos aos
 * Crie um link chamado Sobre.
 * Crie um link chamado Contato.
 
-1. Crie um artigo que vai conter os fatos interessantes sobre o Stomatopoda. O artigo terá o subtítulo Fatos sobre o Stomatopoda.
+3. Crie um artigo que vai conter os fatos interessantes sobre o Stomatopoda. O artigo terá o subtítulo Fatos sobre o Stomatopoda.
 
-2. Divida o artigo em seções, organizando-o da seguinte forma:
+4. Divida o artigo em seções, organizando-o da seguinte forma:
 
 * Uma primeira seção contendo informações gerais a respeito do animal. O subtítulo para essa seção fica a seu critério. É necessário que conste nessa seção seu nome científico, que é Odontodactylus scyllarus, em itálico. Além disso, é preciso que haja informação tabular a respeito de sua classificação científica, em específico: Reino, Filo, Subfilo, Classe, Subclasse e Ordem. Tais informações você consegue obter na Wikipedia.
 
@@ -32,6 +32,6 @@ Adicione, para cada seção, um subtítulo referente ao fato escolhido.
 6. Adicione um rodapé na página, mostrando algo do gênero:
 
 7. Adicione um rodapé na página, mostrando algo do gênero:
-"Conteúdo compilado por <insere seu nome>, <ano atual>".
+"Conteúdo compilado por *(insere seu nome)*, *(ano atual)*".
 
-Obs: para esse exercício, é obrigatório fazer uso de, no mínimo, 6 elementos com as seguintes tags: header, nav, article, section, h1, h2, h3, aside, footer, table e img.
+Obs: para esse exercício, é obrigatório fazer uso de, no mínimo, 6 elementos com as seguintes tags: **header**, **nav**, **article**, **section**, **h1**, **h2**, **h3**, **aside**, **footer**, **table** e **img**.
