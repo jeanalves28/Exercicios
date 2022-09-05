@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <main id="paiDoPai">
+        <section id="pai">
+          <section id="primeiroFilho"></section>
+          <section id="elementoOndeVoceEsta">
+            <section id="primeiroFilhoDoFilho"></section>
+            <section id="segundoEUltimoFilhoDoFilho"></section>
+          </section>
+          Atenção!
+          <section id="terceiroFilho"></section>
+          <section id="quartoEUltimoFilho"></section>
+        </section>
+      </main>
+    <script>
+        console.log(document.getElementById('elementoOndeVoceEsta'))
+        console.log(document.getElementById('elementoOndeVoceEsta').parentElement.style.color = 'DarkBlue');
+        console.log(document.getElementById('primeiroFilhoDoFilho').innerText = 'Primeiro filho do filho');
+        console.log(document.getElementById('pai').firstElementChild);
+        console.log(document.getElementById('elementoOndeVoceEsta').previousElementSibling);
+        console.log(document.getElementById('elementoOndeVoceEsta').nextSibling);
+        console.log(document.getElementById('elementoOndeVoceEsta').nextElementSibling);
+        console.log(document.getElementById('pai').nextElementSibling);
+
+        const sectionPai = document.getElementById('pai');
+        const div = document.createElement('div');
+        div.innerText = 'Olá mundo!';
+        sectionPai.insertBefore(div, sectionPai.children[1]);
+
+        const paragrafo = document.createElement('p');
+        paragrafo.innerText = 'paragrafo criado';
+        const sectionIdElemento = document.getElementById('elementoOndeVoceEsta');
+        sectionIdElemento.appendChild(paragrafo);
+
+        const primeiroFilhoDoFilho = document.getElementById('primeiroFilhoDoFilho');
+        const h1 = document.createElement('h1');
+        primeiroFilhoDoFilho.insertBefore(h1, primeiroFilhoDoFilho.children[0]);
+
+        const removeFilhosPaiDoPai = document.querySelectorAll('section');
+        for (let i = 0; i < removeFilhosPaiDoPai.length; i++)
+        {
+          if (i == 0 || i == 2 || i == 3)
+            continue;
+
+          removeFilhosPaiDoPai[i].remove();
+        }
+    </script>
+</body>
+</html>
