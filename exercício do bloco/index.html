@@ -58,10 +58,12 @@
   <body>
     <script>
       const tagH1 = document.createElement('h1');
-      const text = document.createTextNode('Exercício 5.2');
-      tagH1.appendChild(text);
+      tagH1.innerText = 'Exercício 5.2';
       document.body.appendChild(tagH1);
 
+      const tagMain = document.createElement('main');
+      tagMain.className = 'main-content';
+      document.body.appendChild(tagMain);
       
     </script>
   </body>
