@@ -127,6 +127,13 @@
       document.querySelector('main').appendChild(tagH3_3);
 
       tagH1.className = 'title';
+
+      tagH3.className = 'description';
+      tagH3_2.className = 'description';
+      tagH3_3.className = 'description';
+
+      const removeSection = document.querySelector('.main-content');
+      removeSection.removeChild(removeSection.children[1]);
     </script>
   </body>
 </html>
