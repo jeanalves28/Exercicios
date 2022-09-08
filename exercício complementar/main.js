@@ -23,6 +23,15 @@ for (let i = 0; i < listLi.length; i++)
 
 // 2.1. Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
 
+function out ()
+{
+    for (let i = 1; i < listLi.length; i++)
+        listLi[i].classList.remove('tech');
+}
+
+for (let i = 0; i < listLi.length; i++)
+    listLi[i].addEventListener('mouseout', out);
+
 // 3. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 // com a classe 'tech';
 
