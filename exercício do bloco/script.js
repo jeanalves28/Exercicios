@@ -16,12 +16,12 @@ decemberDaysList();
 buttonHoliday('Feriados');
 adicionarCorDeFundoNosFeriados();
 buttonSextaFeira('Sexta-feira');
+exibirTextoNasSextas();
   
   // Escreva seu código abaixo.
 
 function decemberDaysList() {
   const decemberDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
-  const tagUl = document.getElementById('days');
 
   for (let i = 0; i < decemberDaysList.length; i ++) {
     const tagLi = document.createElement('li');
@@ -82,4 +82,29 @@ function buttonSextaFeira(weekend) {
   tagButton.setAttribute('id', 'btn-friday');
 
   tagPai.appendChild(tagButton);
+}
+
+function exibirTextoNasSextas() {
+  const buttonSextaFeira = document.getElementById('btn-friday');
+
+  buttonSextaFeira.addEventListener('click',() => {
+    const dayFriday = document.getElementsByClassName('friday');
+    
+    for (let i = 0;i < dayFriday.length; i++) {
+      const tagLi = document.createElement('li');
+
+      tagLi.innerText = 'Dia de Sexta';
+
+      if (window.getComputedStyle(dayFriday[i]).display != 'none') {
+        dayFriday[i].insertAdjacentElement('afterend',tagLi);
+        dayFriday[i].style.display = 'none';
+      }
+        
+        else {
+          dayFriday[i].style.display = 'inline-block';
+          dayFriday[i].parentNode.removeChild(dayFriday[i].nextElementSibling);
+        } 
+    }
+
+  });
 }
