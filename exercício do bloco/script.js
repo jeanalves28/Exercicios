@@ -19,6 +19,7 @@ buttonSextaFeira('Sexta-feira');
 exibirTextoNasSextas();
 aumentarTamanhoDosDias();
 adicionarTarefas('cozinhar');
+adicionarLegendaColorida('Lime');
 
   // Escreva seu código abaixo.
 
@@ -136,4 +137,15 @@ function adicionarTarefas(string) {
   tagSpan.innerText = string;
 
   pai.appendChild(tagSpan);
+}
+
+function adicionarLegendaColorida(bgColor) {
+  const tagDiv = document.createElement('div');
+  const pai = document.querySelector('.my-tasks');
+
+  tagDiv.className = 'task';
+
+  tagDiv.style.backgroundColor = bgColor;
+
+  pai.appendChild(tagDiv);
 }
