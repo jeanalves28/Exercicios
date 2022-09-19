@@ -22,6 +22,7 @@ adicionarTarefas('cozinhar');
 adicionarLegendaColorida('Lime');
 selecionarTarefa();
 atribuirCorDeTarefaAoDia();
+botaoAdicionarTarefa();
 
   // Escreva seu código abaixo.
 
@@ -181,3 +182,46 @@ function atribuirCorDeTarefaAoDia() {
     });
   });
 }
+
+function botaoAdicionarTarefa() {
+  const buttonAdd = document.getElementById('btn-add');
+  const inputTask = document.getElementById('task-input');
+  
+
+  buttonAdd.addEventListener('click', (e) => {  
+    const chars = inputTask.value;
+
+    if (chars.length != 0) {
+      const tagUl = document.querySelector('.task-list');
+      const tagLi = document.createElement('li');
+
+      tagLi.innerText = chars;
+
+      tagUl.appendChild(tagLi);
+
+      inputTask.value = '';
+    }
+
+      else window.alert('sem tarefa digitada.');
+  });
+
+  inputTask.addEventListener('keyup', e => {
+    const chars = inputTask.value;
+    
+    if (e.key == 'Enter') {
+      if (chars.length != 0) {
+        const tagUl = document.querySelector('.task-list');
+        const tagLi = document.createElement('li');
+
+        tagLi.innerText = chars;
+
+        tagUl.appendChild(tagLi);
+
+        inputTask.value = '';
+      }
+
+        else window.alert('sem tarefa digitada.');
+    }
+  });
+}
+
