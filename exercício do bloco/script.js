@@ -199,6 +199,12 @@ function botaoAdicionarTarefa() {
 
       tagUl.appendChild(tagLi);
 
+      const arr = JSON.parse(sessionStorage.getItem('taskCalendar'));
+
+      arr.push(chars);
+
+      sessionStorage.setItem('taskCalendar', JSON.stringify(arr));
+
       inputTask.value = '';
     }
 
@@ -207,7 +213,7 @@ function botaoAdicionarTarefa() {
 
   inputTask.addEventListener('keyup', e => {
     const chars = inputTask.value;
-    
+
     if (e.key == 'Enter') {
       if (chars.length != 0) {
         const tagUl = document.querySelector('.task-list');
@@ -217,6 +223,12 @@ function botaoAdicionarTarefa() {
 
         tagUl.appendChild(tagLi);
 
+        const arr = JSON.parse(sessionStorage.getItem('taskCalendar'));
+
+        arr.push(chars);
+
+        sessionStorage.setItem('taskCalendar', JSON.stringify(arr));
+
         inputTask.value = '';
       }
 
@@ -225,3 +237,24 @@ function botaoAdicionarTarefa() {
   });
 }
 
+function startSessionStorage() {
+  if (sessionStorage.getItem('taskCalendar') === null)
+    sessionStorage.setItem('taskCalendar', JSON.stringify([]));
+    
+    else {
+      const arr = JSON.parse(sessionStorage.getItem('taskCalendar'));
+
+      arr.forEach( task => {
+        const tagLi = document.createElement('li');
+
+        tagLi.innerText = task;
+
+        document.querySelector('.task-list').appendChild(tagLi);
+      });
+        
+    }
+}
+
+window.onload = () => {
+  startSessionStorage();
+}
