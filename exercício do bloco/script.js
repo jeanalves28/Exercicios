@@ -17,6 +17,7 @@ buttonHoliday('Feriados');
 adicionarCorDeFundoNosFeriados();
 buttonSextaFeira('Sexta-feira');
 exibirTextoNasSextas();
+aumentarTamanhoDosDias();
   
   // Escreva seu código abaixo.
 
@@ -94,6 +95,8 @@ function exibirTextoNasSextas() {
       const tagLi = document.createElement('li');
 
       tagLi.innerText = 'Dia de Sexta';
+      tagLi.className = 'day';
+      tagLi.setAttribute('id', 'btn-friday');
 
       if (window.getComputedStyle(dayFriday[i]).display != 'none') {
         dayFriday[i].insertAdjacentElement('afterend',tagLi);
@@ -106,5 +109,21 @@ function exibirTextoNasSextas() {
         } 
     }
 
+  });
+}
+
+function aumentarTamanhoDosDias() {
+  const li = document.querySelectorAll('.day');
+
+  li.forEach( i => {
+    i.addEventListener('mouseover',(e) => {
+      e.target.style.fontSize = '27px';
+    });
+  });
+
+  li.forEach( i => {
+    i.addEventListener('mouseout',(e) => {
+      e.target.style.fontSize = '20px';
+    });
   });
 }
