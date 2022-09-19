@@ -14,6 +14,7 @@ function createDaysOfTheWeek() {
 createDaysOfTheWeek();
 decemberDaysList();
 buttonHoliday('Feriados');
+adicionarCorDeFundoNosFeriados();
   
   // Escreva seu código abaixo.
 
@@ -48,4 +49,25 @@ function buttonHoliday(holiday) {
   tagButton.setAttribute('id', 'btn-holiday');
 
   tagDivButton.appendChild(tagButton);
+}
+
+function adicionarCorDeFundoNosFeriados() {
+  const buttonHoliday = document.getElementById('btn-holiday');
+
+  buttonHoliday.addEventListener('click',() => {
+    const holidays = document.querySelectorAll('.holiday');
+    const bgColor = [];
+
+    for (let i = 0; i < holidays.length; i++) {
+      const aux = window.getComputedStyle(holidays[i]).backgroundColor;
+      bgColor.push(aux);
+    }
+
+    for (let i = 0; i < holidays.length; i++) {
+      if (bgColor[i] !== 'rgb(0, 255, 255)')
+        holidays[i].style.backgroundColor = 'Aqua';
+        
+        else holidays[i].style.backgroundColor = 'rgb(238,238,238)';
+    }
+  });
 }
