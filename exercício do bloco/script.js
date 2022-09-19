@@ -20,6 +20,7 @@ exibirTextoNasSextas();
 aumentarTamanhoDosDias();
 adicionarTarefas('cozinhar');
 adicionarLegendaColorida('Lime');
+selecionarTarefa();
 
   // Escreva seu código abaixo.
 
@@ -148,4 +149,12 @@ function adicionarLegendaColorida(bgColor) {
   tagDiv.style.backgroundColor = bgColor;
 
   pai.appendChild(tagDiv);
+}
+
+function selecionarTarefa() {
+  const tagDiv = document.querySelector('.task');
+  
+  tagDiv.addEventListener('click', e => {
+    e.target.classList.toggle('selected');
+  });
 }
