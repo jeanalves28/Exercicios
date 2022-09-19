@@ -167,11 +167,10 @@ function atribuirCorDeTarefaAoDia() {
     d.addEventListener('click', e => {
       const tarefaSelecionada = document.querySelector('.task');
       const listaDeClass = tarefaSelecionada.classList;
-      let color;
 
       listaDeClass.forEach ( c => {
         if (c == 'selected') {
-          color = window.getComputedStyle(tarefaSelecionada).backgroundColor;
+          const color = window.getComputedStyle(tarefaSelecionada).backgroundColor;
           
           if (window.getComputedStyle(e.target).color != color)
             e.target.style.color = color;
