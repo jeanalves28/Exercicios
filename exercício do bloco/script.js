@@ -18,7 +18,8 @@ adicionarCorDeFundoNosFeriados();
 buttonSextaFeira('Sexta-feira');
 exibirTextoNasSextas();
 aumentarTamanhoDosDias();
-  
+adicionarTarefas('cozinhar');
+
   // Escreva seu código abaixo.
 
 function decemberDaysList() {
@@ -126,4 +127,13 @@ function aumentarTamanhoDosDias() {
       e.target.style.fontSize = '20px';
     });
   });
+}
+
+function adicionarTarefas(string) {
+  const tagSpan = document.createElement('span');
+  const pai = document.querySelector('.my-tasks');
+
+  tagSpan.innerText = string;
+
+  pai.appendChild(tagSpan);
 }
