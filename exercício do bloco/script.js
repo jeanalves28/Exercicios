@@ -21,6 +21,7 @@ aumentarTamanhoDosDias();
 adicionarTarefas('cozinhar');
 adicionarLegendaColorida('Lime');
 selecionarTarefa();
+atribuirCorDeTarefaAoDia();
 
   // Escreva seu código abaixo.
 
@@ -156,5 +157,28 @@ function selecionarTarefa() {
   
   tagDiv.addEventListener('click', e => {
     e.target.classList.toggle('selected');
+  });
+}
+
+function atribuirCorDeTarefaAoDia() {
+  const days = document.querySelectorAll('.day');
+
+  days.forEach( d => {
+    d.addEventListener('click', e => {
+      const tarefaSelecionada = document.querySelector('.task');
+      const listaDeClass = tarefaSelecionada.classList;
+      let color;
+
+      listaDeClass.forEach ( c => {
+        if (c == 'selected') {
+          color = window.getComputedStyle(tarefaSelecionada).backgroundColor;
+          
+          if (window.getComputedStyle(e.target).color != color)
+            e.target.style.color = color;
+
+            else e.target.style.color = 'rgb(119,119,119)';
+        }
+      });
+    });
   });
 }
