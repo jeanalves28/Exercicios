@@ -15,6 +15,7 @@ createDaysOfTheWeek();
 decemberDaysList();
 buttonHoliday('Feriados');
 adicionarCorDeFundoNosFeriados();
+buttonSextaFeira('Sexta-feira');
   
   // Escreva seu código abaixo.
 
@@ -70,4 +71,15 @@ function adicionarCorDeFundoNosFeriados() {
         else holidays[i].style.backgroundColor = 'rgb(238,238,238)';
     }
   });
+}
+
+function buttonSextaFeira(weekend) {
+  const tagButton = document.createElement('button');
+  const tagPai = document.querySelector('.buttons-container');
+
+  tagButton.innerHTML = weekend;
+
+  tagButton.setAttribute('id', 'btn-friday');
+
+  tagPai.appendChild(tagButton);
 }
