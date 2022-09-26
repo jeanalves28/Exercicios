@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Formulário</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href="bootstrap-5.2.1-dist/css/bootstrap.min.css">
+    <script src="jquery-3.6.1.min.js"></script>
+    <script src="bootstrap-5.2.1-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <form action="" id="form-trip">
+        <div class="container-fluid" id="container-top">
+            <fieldset class="container column">
+                <label for="firstName">Primeiro nome: <input name="name-complete" type="text" minlength="10" maxlength="40" id="firstName"></label>
+            <label for="lastName">Sobrenome: <input name="name-complete" type="text" minlength="10" maxlength="40" id="lastName"></label>
+            <label for="email">E-mail: <input name="e-mail" type="email" id="email"></label>
+            </fieldset>
+        </div>
+
+        <div class="container-fluid" id="container-middle">
+            <fieldset class="container wrap ">
+                <label for="destiny-favorite">Destino Favorito
+                <select name="destino-preferido" id="destiny-favorite">
+                    <option value="" disabled selected></option>
+                    <option value="cidade">Cidade</option>
+                    <option value="campo">Campo</option>
+                    <option value="praia">Praia</option>
+                    <option value="montanha">Montanha</option>
+                </select>
+                </label>
+
+                <label for="dataTrip">Qual a melhor data para realizar sua viagem? <input name="data-de-viagem" type="date" min="2022-01-01" id="dataTrip"></label>
+            </fieldset>
+            
+            <div id="container-middle-bottom">
+                <label for="texto-justificativa">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?
+                <textarea name="justify" id="texto-justificativa" cols="45" rows="9" maxlength="500" placeholder="Escreva aqui.."></textarea>
+                </label>  
+            </div> 
+        </div>
+            
+        <div class="container-fluid row" id="container-bottom">
+            <div id ="container-bottom-left">
+                <label>Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
+                <label for="yes-receive"><input type="radio" name="receive" id="yes-receive"> Sim</label>
+                <label for="no-receive"><input type="radio" name="receive" id="no-receive"> Não</label>
+            </div>
+            
+            <div id="container-bottom-right">
+                <label>Concordo que imagens das minhas férias poderão ser usadas para divulgação de concursos futuros.</label>
+                <label for="agree">Concordo <input type="checkbox" name="agreement" id="agree"></label>
+            </div>
+        </div>
+            
+        <input class="button-style container" type="submit" id="submit-form">
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
