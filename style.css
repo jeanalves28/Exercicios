@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', 'fira code retina';
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(37, 37, 37);
+  color: white;
+  height: 80px;
+}
+
+header h1 {
+  font-size: 18px;
+}
+
+header h2 {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+#description {
+  height: 35px;
+  align-items: center;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+}
+
+#container-programation-language {
+  flex-flow: wrap column;
+  align-items: stretch;
+  align-content: center;
+  justify-content: flex-start;
+  height: calc(2 * 220px);
+}
+
+#container-programation-language div {
+  background-color: whitesmoke;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  border-radius: 15px;
+  margin: 7px 3px;
+  padding: 15px;
+}
+
+#container-programation-language div:nth-child(1) {
+  order: 1;
+}
+
+#container-programation-language div:nth-child(2) {
+  order: 3;
+}
+
+#container-programation-language div:nth-child(3) {
+  order: 5;
+}
+
+#container-programation-language div:nth-child(4) {
+  order: 2;
+}
+
+#container-programation-language div:nth-child(5) {
+  order: 4;
+}
+
+#container-programation-language div:nth-child(6) {
+  order: 6;
+}
+
+#container-programation-language hr {
+  order: 4;
+  margin: auto 7px 0 7px;
+  background-color: whitesmoke;
+}
+
+.header-img {
+  width: 70px;
+  height: 80%;
+}
+
+.gallery-img {
+  width: 150px;
+  height: 150px;
+}
+
+.social-img {
+  width: 25px;
+  margin-left: 10px;
+}
+
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
